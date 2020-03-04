@@ -1,17 +1,20 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <ion-card class="card">
+        <ion-card-content>
+            <ion-avatar>
+              <img class="ava" src="/assets/img/mavatar.png">
+            </ion-avatar>
+              <h3 class="ze">John Doe</h3>
+        </ion-card-content>
+      </ion-card>
       <ion-content>
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" lines="none">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
+              <ion-label class="ew">
                 {{p.title}}
               </ion-label>
             </ion-item>

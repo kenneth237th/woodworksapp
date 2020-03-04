@@ -1,0 +1,27 @@
+.gin {
+    font-family: 'Montserrat';
+    font-size: 35px;
+    font-weight: 800;
+    padding-left: 10px;
+}
+
+.no-shadow {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.btn {
+    width: 150px;
+    border-color: #f3f3f3;
+    // margin-left: 125px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    border-color: #f3f3f3 !important;
+    margin: 50px 125px 0px 125px;
+}
+
+.list {
+    font-family: 'Montserrat';
+    font-size: 11px;
+    width: 320px;
+}

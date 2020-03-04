@@ -1,0 +1,61 @@
+<ion-buttons slot="start">
+  <ion-button [routerLink]="['/main']">
+    <ion-icon name="close" slot="icon-only"></ion-icon>
+  </ion-button>
+</ion-buttons>
+
+<ion-content>
+  <h1 class="gin">Signup</h1>
+  <ion-grid class="center-content">
+      <ion-row class="ion-justify-content-center ion-align-items-center">
+        <!-- <form *ngIf="register" (submit)="Register($event)"> -->
+          <ion-list class="list">
+              <ion-item>
+                <ion-label position="floating">Fullname</ion-label>
+                <ion-input required type="text" id="fullName"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Address</ion-label>
+                <ion-input required type="text" id=""></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Birthday</ion-label>
+                <ion-input required type="text" id="birthday"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Age</ion-label>
+                <ion-input required type="text" id="age"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Contact #</ion-label>
+                <ion-input required type="text" id="contactNumber"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input required type="text" id="email"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input required type="password" id="password"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Confirm Password</ion-label>
+                <ion-input required type="password"></ion-input>
+              </ion-item>
+        <!-- </form> -->
+        </ion-list>
+      </ion-row>  
+        <div class="ion-padding-top center-button">
+            <ion-button class="btn" fill="outline" color="medium" expand="block"
+            value="submit"
+            >Signup</ion-button>
+        </div>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header class="bg" no-border>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/home" icon="arrow-back" color="dark">
+    </ion-back-button>
+  </ion-buttons>
+
+    <ion-title>Category</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button class="btn1" (click)="openCart()">
+        <div>{{ cartItemCount | async }}</div>
+        <ion-icon name="cart" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

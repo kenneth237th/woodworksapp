@@ -1,0 +1,107 @@
+<ion-header class="bg" no-border>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/home" icon="arrow-back" color="light">
+    </ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content [attr.noScroll] class="no-border">
+ <ion-grid no-padding> 
+    <ion-row>
+      <ion-col no-padding>
+        <ion-card class="card">
+          <img class="image" src="{{data.img}}">
+          <ion-card class="card2">
+            <ion-badge slot="start">4.0</ion-badge>
+            <ion-icon class="icon" name="heart" slot="end icon-only"></ion-icon>
+          </ion-card>
+          <ion-card class="card3">
+            <ion-buttons>
+              <ion-button>
+                <ion-icon color="dark" name="heart-empty" slot="icon-only"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-card>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-list>
+      <ion-text>
+        <h1 class="name">{{data.name}}</h1>
+        <p class="detail">{{data.detail}}</p>
+      </ion-text>
+      <h1 class="pro">Product details</h1>
+        <ion-segment>
+          <ion-card class="colors">
+            <h4 class="labs">Colors</h4>
+          </ion-card>
+          <div class="right">
+          <ion-buttons class="btn">
+            <ion-button class="brown"></ion-button>
+            <ion-button class="red"></ion-button>
+            <ion-button class="grey"></ion-button>
+          </ion-buttons>
+          </div>
+        </ion-segment>
+
+        <ion-row>
+          <ion-card class="color">
+            <h4 class="labs">Dimension</h4>
+          </ion-card>
+          <label class="laaabs">{{data.dimension}}</label>
+        </ion-row>
+
+
+        <ion-row>
+          <ion-card class="color">
+            <h4 class="labs">Stock</h4>
+          </ion-card>
+          <label class="laabs">{{data.stock}}</label>
+        </ion-row>
+
+        
+        <ion-row>
+          <ion-card class="color">
+            <h4 class="labs">Price</h4>
+          </ion-card>
+          <label class="laabs">{{data.price}}</label>
+        </ion-row>
+
+
+        <h4 class="quan">Select Quantity</h4>
+      <ion-row>
+        <!-- <ion-card class="border"> -->
+          <ion-buttons class="buttons">
+            <ion-button slot="start" class="decrement" (click)="decrement(counter)">
+              -
+            </ion-button>
+            <ion-label class="label" type="number" (ionChange)="changeCounter($event)">{{counter}}</ion-label>
+            <!-- <ion-input type="number" (ionChange)="changeCounter($event)"  value="{{counter}}"> </ion-input> -->
+            <ion-button class="increment" (click)="increment(counter)">
+              +
+            </ion-button>
+          </ion-buttons>
+        <!-- </ion-card> -->
+      </ion-row>
+    </ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-segment>
+          <ion-buttons>
+            <ion-button class="outline" fill="outline">
+              <label class="pri">₱ {{data.price * counter}}</label>
+            </ion-button>
+
+            <ion-button class="yellow">
+              <ion-icon name="add"></ion-icon>
+              <label class="to" (click)="addtoCart()">Add to cart</label>
+            </ion-button>
+          </ion-buttons>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
